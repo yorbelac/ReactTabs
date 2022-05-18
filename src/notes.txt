@@ -1,0 +1,28 @@
+Some notes to refer to:
+
+//to quick create a component
+rafce
+
+//to style inline
+<h1 style={{color: 'red'}}>TEXT</h1>
+
+//to style via variable
+<h1 style={headingStyles}></h1>
+const headingStyles = {
+    color: 'red',
+    backgroundColor: 'black',
+}
+
+
+//setting default properties
+Header.defaultProps = {
+    title: "Tabs",
+    subtitle: "Tracking Customer Tabs",
+}
+
+//setting default property types
+Header.propTypes = {
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+}
+
