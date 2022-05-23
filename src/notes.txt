@@ -26,3 +26,5 @@ Header.propTypes = {
     subtitle: PropTypes.string,
 }
 
+//map function
+{tabs.map((tab) => (<h3>{tab.name}</h3>))}
