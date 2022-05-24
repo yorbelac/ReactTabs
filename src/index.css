@@ -19,9 +19,30 @@
   border: 0;
 }
 
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+}
+
+input[type='radio'] { 
+  transform: scale(2);
+  border-color:steelblue;
+}
+
+select {
+  font-size: 1em;
+  padding: 8px;
+  font-family: 'Poppins', sans-serif;
+  /* box-shadow: inset 1px 0px 3px var(--white2); */
+  box-shadow: 0px 1px 2px var(--white2);
+  border-radius:2px;
+  width:100%;
+  background-color: white;
+}
+
+.styleRadio:checked + label::after {
+  border: 2px solid steelblue;
 }
 
 .container {
@@ -74,8 +95,6 @@ body {
   border-left: 5px solid var(--green) !important;
   font-weight: 600;
 }
-.navMenu {}
-.navStats {}
 
 .appGrid {
   width: 1400px;
@@ -96,7 +115,7 @@ body {
   line-height:50px;
   grid-column-start: 1;
   grid-column-end: 5;
-  border-radius: 2px
+  border-radius: 3px
 }
 
 .headerTitle {
@@ -115,18 +134,17 @@ body {
 }
 
 .tabSelectPanel {
-  box-shadow: 0px 2px 2px -2px grey;
   height:850px;
   margin-left:10px
 }
 
 .tabSelectHeader {
-  box-shadow: 0px 2px 2px -2px grey;
   display:grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 40px;
   min-height: 40px;
   line-height:40px;
   margin-bottom:10px;
+
 }
 
 .tabSelectHeaderDate {
@@ -134,15 +152,27 @@ body {
   color:white;
   height: 100%;
   padding-left:10px;
+  border-radius: 3px 0px 0px 3px;
 }
 
 .tabSelectHeaderTotal {
+  box-shadow: 0px 2px 2px -2px grey;
   background-color:var(--darkBlue);
-  color:white;
+  color:whitesmoke;
   min-width: 100px;
   height:100%;
   text-align:right;
   padding-right:10px;
+}
+
+.tabSelectHeaderOrders {
+  box-shadow: 0px 2px 2px -2px grey;
+  background-color:var(--darkBlue);
+  color:whitesmoke;
+  height:100%;
+  text-align:center;
+  border-radius:3px;
+  border-left:1px solid white;
 }
 
 .tabSelectRows {
@@ -151,8 +181,9 @@ body {
 }
 
 .tabSelectRow {
+  
   display:grid;
-  grid-template-columns: 40px 1fr 100px;
+  grid-template-columns: 40px 1fr 100px 40px;
   line-height:39px;
 }
 
@@ -162,6 +193,7 @@ body {
   height: 100%;
   text-align:center;
   border-bottom: 1px solid darkgrey;
+  /* padding-top:2px; */
 }
 
 .tabSelectRowName {
@@ -181,12 +213,10 @@ body {
 }
 
 .tabPanel {
-  box-shadow: 0px 2px 2px -2px grey;
   height:850px;
 }
 
 .tabHeader {
-  box-shadow: 0px 2px 2px -2px grey;
   display:grid;
   grid-template-columns: 3fr 120px;;
   min-height: 40px;
@@ -199,9 +229,12 @@ body {
   color:white;
   height: 100%;
   padding-left:10px;
+  padding-left:10px;
+  border-radius: 3px 0px 0px 3px;
 }
 
 .tabHeaderTotal {
+  box-shadow: 0px 2px 2px -2px grey;
   background-color:var(--darkBlue);
   color:white;
   min-width: 100px;
@@ -232,10 +265,11 @@ body {
 
 .tabRowItem {
   background-color:var(--whiteFloor);
+  color:#404040;
   border-bottom: 1px solid var(--white2);
   min-width: 150px;
   padding-left: 10px;
-  font-weight:600;
+  /* font-weight:600; */
 }
 
 .tabRowTotal {
@@ -250,7 +284,7 @@ body {
 .tabOrderPanel {
   display:grid;
   grid-template-rows: 280px 110px 1fr;
-  gap:20px;
+  gap:10px;
   /* margin-right: -10px; */
 }
 
@@ -297,6 +331,54 @@ body {
   font-size: 2em;
 }
 
+.buttonAddCustomer {
+  background-color: var(--white2);
+  box-shadow: -1px 1.2px 2px -1px grey;
+  border-radius:3px;
+  color:grey;
+  text-align:center;
+  font-weight: 800;
+  font-size: 2em;
+  width: 40px;;
+  height:40px;
+  line-height:40px;
+  margin-top:10px;
+  float:right;
+}
+
+.buttonAddCustomer:hover {
+  background-color: var(--green);
+  color:white;
+  transition-duration: .2s;
+  width: 42px;
+  height: 42px;
+  margin-left: -1px;
+  margin-top:9px;
+  line-height: 42px;
+  font-size: 2.2em;
+}
+
+.buttonRemoveCustomer {
+  background-color: var(--white2);
+  box-shadow: -1px 1.2px 2px -1px grey;
+  color:grey;
+  text-align:center;
+  font-weight: 800;
+  font-size: 2em;
+  width: 30px;
+  height:30px;
+  margin-top:3.5px;
+  margin-left:6px;
+  line-height:30px;
+  border-radius:3px;
+}
+
+.buttonRemoveCustomer:hover {
+  background-color:var(--red);
+  color:whitesmoke;
+  transition-duration: .2s;
+}
+
 .tabOrderTotal {
   background-color:rgb(239, 255, 244);
   height: 60px;
@@ -326,7 +408,7 @@ body {
 }
 
 .quicklistHeader {
-  background-color:#var(--yellow);
+  background-color:var(--yellow);
   box-shadow: 0px 2px 2px -2px grey;
   color: #140f00;
   font-weight: 600;
