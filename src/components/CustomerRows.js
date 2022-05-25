@@ -7,6 +7,8 @@ const CustomerRows = () => {
         <CustomerRow name='Shane' total='475.50' paint='tabSelectRowActive'/>
         <CustomerRow name='Mikey' total='125.75'/>
         <CustomerRow name='Table 2' total='47.35'/>
+        <CustomerRow name='Table 2' total='47.35'/>
+        <CustomerRow name='Table 2' total='47.35'/>
     </div>
   )
 }

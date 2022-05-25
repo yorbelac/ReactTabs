@@ -99,7 +99,7 @@ select {
 .appGrid {
   width: 1400px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 50px 1fr;
   padding: 10px;
   padding-left: 15px;

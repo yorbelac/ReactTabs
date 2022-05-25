@@ -9,9 +9,10 @@ const AppGrid = () => {
             <div className='header'>
             <div className="headerTitle"><h1>TABS</h1></div>
             </div>
+            <TabsPanelOrder />  
             <TabsPanelCustomers />
             <TabsPanelTab />
-            <TabsPanelOrder />   
+ 
         </div>
   )
 }
