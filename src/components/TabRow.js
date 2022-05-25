@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types'
 
-const TabRow = ({item,total}) => {
+const TabRow = ({paint,date,item,total}) => {
   return (
-    <div className="tabRow">
-        <div className="tabRowDate">5/17/2022</div>
+    <div className={paint}>
+        <div className="tabRowDate">{date}</div>
         <div className="tabRowItem">{item}</div>
-        <div className="tabRowTotal">{total}</div>
+        <div className="tabRowTotal">${total}</div>
     </div>
   )
 }
 
 TabRow.defaultProps = {
+  paint: 'tabRow',
+  date: '5/24/2022',
   item: 'Menu Item',
   total: '00.00',
 }

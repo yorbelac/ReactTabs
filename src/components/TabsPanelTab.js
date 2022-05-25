@@ -8,9 +8,9 @@ const PanelTab = () => {
             <div className="tabHeaderTotal">$487.26</div>
         </div>
         <div className="tabRows">
-            <TabRow/>
-            <TabRow/>
-            <TabRow/>
+            <TabRow item='Food-Tacos 4x' total='9.87' paint='tabRowToday'/>
+            <TabRow item='Food-Chicken Masala' total='11.87' paint='tabRowToday'/>
+            <TabRow item='Drinks-Soda $2' total='2.15' paint='tabRowToday'/>
             <TabRow/>
             <TabRow/>
             <TabRow/>

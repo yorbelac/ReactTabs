@@ -176,40 +176,54 @@ select {
 }
 
 .tabSelectRows {
-  display:grid;
-  grid-auto-rows:40px;
+    /* display:grid; */
 }
 
 .tabSelectRow {
-  
+  background-color:var(--white2);
+  color:#808080;
   display:grid;
   grid-template-columns: 40px 1fr 100px 40px;
-  line-height:39px;
+  line-height:35px;
+}
+
+.tabSelectRowActive {
+  background-color:#555;
+  color:whitesmoke;
+  display:grid;
+  grid-template-columns: 40px 1fr 100px 40px;
+  line-height:35px;
 }
 
 .tabSelectRowCheck {
-  background-color:var(--white2);
-  color:#808080;
   height: 100%;
   text-align:center;
   border-bottom: 1px solid darkgrey;
-  /* padding-top:2px; */
+  padding-top:5px;
 }
 
 .tabSelectRowName {
   background-color:var(--whiteFloor);
+  color: var(--blackFloor);
   border-bottom: 1px solid rgb(220, 220, 220);
   min-width: 150px;
   padding-left: 10px;
   font-weight:600;
+  padding-top:3.5px;
 }
 
 .tabSelectRowTotal {
-  background-color:var(--white2);
-  color:w404040;
   text-align:right;
   padding-right:10px;
   border-bottom: 1px solid darkgrey;
+  padding-top:3.5px;
+}
+
+.buttonContainer {
+  background:white;
+  margin: 0px;
+  padding-top:4px;
+  padding-left:10px;
 }
 
 .tabPanel {
@@ -249,14 +263,22 @@ select {
 }
 
 .tabRow {
+  background-color:var(--white2);
+  color:#404040;
+  display:grid;
+  grid-template-columns: 120px 1fr 120px;
+  line-height:39px;
+}
+
+.tabRowToday {
+  background-color:#555;
+  color:whitesmoke;
   display:grid;
   grid-template-columns: 120px 1fr 120px;
   line-height:39px;
 }
 
 .tabRowDate {
-  background-color:var(--white2);
-  color:w404040;
   height: 100%;
   text-align:left;
   padding-left:10px;
@@ -265,16 +287,14 @@ select {
 
 .tabRowItem {
   background-color:var(--whiteFloor);
-  color:#404040;
   border-bottom: 1px solid var(--white2);
+  color: var(--blackFloor);
   min-width: 150px;
   padding-left: 10px;
   /* font-weight:600; */
 }
 
 .tabRowTotal {
-  background-color:var(--white2);
-  color:w404040;
   min-width: 100px;
   text-align:right;
   padding-right:10px;
@@ -367,8 +387,6 @@ select {
   font-size: 2em;
   width: 30px;
   height:30px;
-  margin-top:3.5px;
-  margin-left:6px;
   line-height:30px;
   border-radius:3px;
 }
