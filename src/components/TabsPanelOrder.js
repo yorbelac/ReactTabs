@@ -2,14 +2,18 @@ import TabsPanelOrderPayment from './TabsPanelOrderPayment'
 import TabsPanelOrderDropdowns from './TabsPanelOrderDropdowns'
 import TabsPanelQuicklist from './TabsPanelQuicklist'
 
-const PanelTabOrder = () => {
+const TabsPanelOrder = ({quicklist, addQuicklist, removeQuicklist}) => {
   return (
     <div className="tabOrderPanel">
     <TabsPanelOrderDropdowns/>
     <TabsPanelOrderPayment/>
-    <TabsPanelQuicklist/>
+    <TabsPanelQuicklist 
+      quicklist={quicklist} 
+      addQuicklist={addQuicklist} 
+      removeQuicklist={removeQuicklist}
+    />
   </div>
   )
 }
 
-export default PanelTabOrder
+export default TabsPanelOrder

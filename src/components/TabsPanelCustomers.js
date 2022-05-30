@@ -1,23 +1,28 @@
 import CustomerRows from "./CustomerRows"
+import AddCustomer from "./AddCustomer"
 
-const PanelTabs = () => {
-
-  //date
-  var today = new Date();
-  today = String(today.getMonth() + 1).padStart(2, '0') + '/' + String(today.getDate()).padStart(2, '0') + '/' + today.getFullYear();
+const TabsPanelCustomers = ({today, customers, selectCustomer, addCustomer, deleteCustomer}) => {
 
   return (
     <div className="tabSelectPanel">
+      {/* header */}
       <div className="tabSelectHeader">
         <div className="tabSelectHeaderDate">{today}</div>
         <div className="tabSelectHeaderTotal">$425.47</div>
         <div className="tabSelectHeaderOrders">27</div>
       </div>
-      <CustomerRows/>
-      {/* new tab button */}
-      <button className='buttonAddCustomer'>+</button>
+      {/* customers */}
+      {customers.length > 0 ? 
+        <CustomerRows 
+          customers={customers} 
+          selectCustomer={selectCustomer} 
+          deleteCustomer={deleteCustomer}
+        />
+      : 
+        <p style={{color: 'grey'}}>Click + to add a customer.</p>}
+      <AddCustomer addCustomer={addCustomer}/>
     </div>
   )
 }
 
-export default PanelTabs
+export default TabsPanelCustomers

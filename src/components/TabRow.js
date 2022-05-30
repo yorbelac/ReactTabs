@@ -5,13 +5,14 @@ const TabRow = ({paint,date,item,total}) => {
     <div className={paint}>
         <div className="tabRowDate">{date}</div>
         <div className="tabRowItem">{item}</div>
-        <div className="tabRowTotal">${total}</div>
+        <div className="tabRowTotal">${total.toFixed(2)}</div>
     </div>
   )
 }
 
 TabRow.defaultProps = {
   paint: 'tabRow',
+  // paint: 'tabRowToday',
   date: '5/24/2022',
   item: 'Menu Item',
   total: '00.00',
@@ -19,7 +20,7 @@ TabRow.defaultProps = {
 
 TabRow.propTypes = {
   item: PropTypes.string,
-  total: PropTypes.number,
+  // total: PropTypes.number,
 }
 
 export default TabRow

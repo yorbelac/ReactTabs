@@ -30,6 +30,10 @@ input[type='radio'] {
   border-color:steelblue;
 }
 
+input[type='text'] {
+  font-family: 'Poppins', sans-serif;
+}
+
 select {
   font-size: 1em;
   padding: 8px;
@@ -177,6 +181,18 @@ select {
 
 .tabSelectRows {
     /* display:grid; */
+}
+
+.newCustomer {
+  background-color:var(--whiteFloor);
+  color: var(--blackFloor);
+  border-bottom: 1px solid rgb(220, 220, 220);
+  margin-top: 10px;
+  width: 280px;
+  height: 40px;
+  padding-left: 10px;
+  font-weight:600;
+  padding-top:3.5px;
 }
 
 .tabSelectRow {
@@ -384,10 +400,10 @@ select {
   color:grey;
   text-align:center;
   font-weight: 800;
-  font-size: 2em;
+  font-size: 1em;
   width: 30px;
   height:30px;
-  line-height:30px;
+  line-height:35px;
   border-radius:3px;
 }
 
@@ -446,14 +462,18 @@ select {
   background-color:white;
   box-shadow: 0px 2px 2px -2px grey;
   display:grid;
-  grid-template-columns: 40px 1fr 80px 40px;
+  grid-template-columns: 32px 1fr 65px 32px;
   line-height: 32px;
 }
 
 .quicklistItemName {
+  font-size: .8em;
+  overflow: hidden;
   padding-left: 10px;
+  padding-right:10px;
 }
  .quicklistItemPrice {
+  font-size: .9em;
    background-color: var(--white2);
    text-align:right;
    font-weight: 600;

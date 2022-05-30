@@ -1,7 +1,7 @@
 const DropDownMenu = () => {
   return (
     <select name="menu">
-      <option selected>Food</option>
+      <option value='DEFAULT'>Food</option>
       <option>Drinks</option>
       <option>Hookah</option>
       <option>Supplies</option>
