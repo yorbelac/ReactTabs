@@ -6,7 +6,7 @@ const CustomerRows = ({customers,selectCustomer,deleteCustomer}) => {
     <div className="tabSelectRows">
       {customers.map((customer) => (
         <CustomerRow 
-          key={customer.name} 
+          key={customer.id} 
           customer={customer}
           selectCustomer={selectCustomer}
           deleteCustomer={deleteCustomer} 

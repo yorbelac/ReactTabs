@@ -6,12 +6,12 @@ const CustomerRow = ({customer,selectCustomer,deleteCustomer}) => {
   return (
     <div className={`${customer.selected ? 'tabSelectRowActive':'tabSelectRow'}`}>
       <div className="tabSelectRowCheck">
-        <input type="radio" name='customer' onChange={() => selectCustomer(customer.name)}/>
+        <input type="radio" name='customer' onChange={() => selectCustomer(customer.id)}/>
       </div>
       <div className="tabSelectRowName">{customer.name}</div>
       <div className="tabSelectRowTotal">${customer.total}</div>
       <div className='buttonContainer'>
-        <button className='buttonRemoveCustomer'onClick={() => deleteCustomer(customer.name)}><FaTimes/></button>
+        <button className='buttonRemoveCustomer'onClick={() => deleteCustomer(customer.id)}><FaTimes/></button>
       </div>        
     </div>
   )

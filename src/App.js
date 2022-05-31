@@ -13,21 +13,25 @@ function App() {
   
   const [customers, setCustomers] = useState([ 
     {
+      id: 1,
       name: 'Caleb',
       total: 250.47,
       selected: false,
     },
     {
+      id: 2,
       name: 'Shane',
       total: 450.47,
       selected: false,
     },
     {
+      id: 3,
       name: 'Mikey',
       total: 150.47,
       selected: false,
     },
     {
+      id: 4,
       name: 'Steve',
       total: 50.47,
       selected: false,
@@ -111,23 +115,25 @@ function App() {
     },
   ])
 
-  const selectCustomer = (name) => {
+  const selectCustomer = (id) => {
     setCustomers(
       customers.map((customer) => 
-        customer.name === name ? { ... customer, selected: true} : {... customer, selected: false}))
+        customer.id === id ? { ... customer, selected: true} : {... customer, selected: false}))
   }
 
-  const addCustomer = (customer) => {
-    const newCustomer = (customer)
+  const createCustomer = (customer) => {
+    const id = Math.floor(Math.random()* 10000) + 1
+    console.log(customer)
+    const newCustomer = { id, ...customer }
     setCustomers([...customers, newCustomer])
   }
 
-  const deleteCustomer = (name) => {
+  const deleteCustomer = (id) => {
     setCustomers(
       customers.map((customer) => 
-        customer.name === name ? { ... customer, selected: false}:''))
+        customer.id === id ? { ... customer, selected: false}:''))
     setCustomers(
-      customers.filter((customer) => customer.name !== name))
+      customers.filter((customer) => customer.id !== id))
   }
   
   // app
@@ -139,7 +145,7 @@ function App() {
         quicklist={quicklist} 
         customers={customers}
         selectCustomer={selectCustomer}
-        addCustomer={addCustomer} 
+        addCustomer={createCustomer} 
         deleteCustomer={deleteCustomer}
         customerTab={customerTab} 
       />   

@@ -20,7 +20,7 @@ const TabsPanelCustomers = ({today, customers, selectCustomer, addCustomer, dele
         />
       : 
         <p style={{color: 'grey'}}>Click + to add a customer.</p>}
-      <AddCustomer addCustomer={addCustomer}/>
+      <AddCustomer newCustomer={addCustomer}/>
     </div>
   )
 }

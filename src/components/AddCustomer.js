@@ -1,15 +1,29 @@
 import {useState} from 'react'
 
-const AddCustomer = ({addCustomer}) => {
+const AddCustomer = ({newCustomer}) => {
 
-    const [customerName, setCustomerName] = useState('')
-    const [customerTotal, setCustomerTotal] = useState(0.00)
-    const [customerSelected, setCustomerSelected] = useState(false)
+    const [name, setName] = useState('')
+    const [total, setTotal] = useState(0.00)
+    const [selected, setSelected] = useState(false)
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+        if(!name) {
+            alert('Please enter a name.')
+            return
+        }
+        newCustomer({name, total, selected})
+
+        setName('')
+        // setTotal('')
+        // setSelected('')
+    }
 
     return (
-        <form>
-            <input className="newCustomer" type="text" placeholder='Type here to add new customer' value={customerName} onChange={(e) => setCustomerName(e.target.value)} />
-            <input type='submit' className='buttonAddCustomer' value="+" onClick={addCustomer}/>
+        <form onSubmit={onSubmit}>
+            <input className="newCustomer" type="text" placeholder='Type here to add new customer' value={name} onChange={(e) => setName(e.target.value)} />
+            <input type='submit' className='buttonAddCustomer' value="+"/>
         </form>
   )
 }
