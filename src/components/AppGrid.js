@@ -18,8 +18,10 @@ const AppGrid = ({today, quicklist, customers, selectCustomer, addCustomer, dele
                 selectCustomer={selectCustomer}
                 addCustomer={addCustomer} 
                 deleteCustomer={deleteCustomer}
+                customerTab={customerTab}
             />
             <TabsPanelTab 
+                customers={customers}
                 customerTab={customerTab}
             /> 
         </div>

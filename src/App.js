@@ -94,6 +94,7 @@ function App() {
   const [customerTab, setCustomerTab] = useState([
     {
       id: 1,
+      name:'Mikey',
       date: '5/10/2022',
       item: 'Food-Chicken-Masala',
       cost: 10.99,
@@ -101,6 +102,7 @@ function App() {
     },
     {
       id: 2,
+      name:'Shane',
       date: '5/10/2022',
       item: 'Hookah-10',
       cost: 10.00,
@@ -108,17 +110,50 @@ function App() {
     },
     {
       id: 3,
+      name:'Caleb',
       date: '5/10/2022',
       item: 'Drinks-Soda (Regular)',
       cost: 2.00,
       today: false,
     },
+    {
+      id: 4,
+      name:'Shane',
+      date: '5/10/2022',
+      item: 'Gyro Sandwich',
+      cost: 10.99,
+      today: true,
+    },
+    {
+      id: 5,
+      name:'Caleb',
+      date: '5/10/2022',
+      item: 'Beer-Premium',
+      cost: 3.50,
+      today: false,
+    },
+    {
+      id: 6,
+      name:'Shane',
+      date: '5/10/2022',
+      item: 'Beer-Premium',
+      cost: 3.50,
+      today: false,
+    },
+    {
+      id: 7,
+      name:'Shane',
+      date: '5/10/2022',
+      item: 'Beer-Premium',
+      cost: 3.50,
+      today: false,
+    },
   ])
 
-  const selectCustomer = (id) => {
+  const selectCustomer = (name) => {
     setCustomers(
       customers.map((customer) => 
-        customer.id === id ? { ... customer, selected: true} : {... customer, selected: false}))
+        customer.name === name ? { ... customer, selected: true} : {... customer, selected: false}))
   }
 
   const createCustomer = (customer) => {
@@ -128,12 +163,12 @@ function App() {
     setCustomers([...customers, newCustomer])
   }
 
-  const deleteCustomer = (id) => {
+  const deleteCustomer = (name) => {
     setCustomers(
       customers.map((customer) => 
-        customer.id === id ? { ... customer, selected: false}:''))
+        customer.name === name ? { ... customer, selected: false}:''))
     setCustomers(
-      customers.filter((customer) => customer.id !== id))
+      customers.filter((customer) => customer.name !== name))
   }
   
   // app

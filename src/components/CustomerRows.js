@@ -1,6 +1,6 @@
 import CustomerRow from './CustomerRow'
 
-const CustomerRows = ({customers,selectCustomer,deleteCustomer}) => {
+const CustomerRows = ({customers,selectCustomer,deleteCustomer,customerTab}) => {
 
   return (
     <div className="tabSelectRows">
@@ -9,7 +9,8 @@ const CustomerRows = ({customers,selectCustomer,deleteCustomer}) => {
           key={customer.id} 
           customer={customer}
           selectCustomer={selectCustomer}
-          deleteCustomer={deleteCustomer} 
+          deleteCustomer={deleteCustomer}
+          customerTab={customerTab} 
         />
       ))}
     </div>
