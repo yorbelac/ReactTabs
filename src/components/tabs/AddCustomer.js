@@ -3,7 +3,6 @@ import {useState} from 'react'
 const AddCustomer = ({newCustomer}) => {
 
     const [name, setName] = useState('')
-    const [total, setTotal] = useState(0.00)
     const [selected, setSelected] = useState(false)
 
     const onSubmit = (e) => {
@@ -13,7 +12,7 @@ const AddCustomer = ({newCustomer}) => {
             alert('Please enter a name.')
             return
         }
-        newCustomer({name, total, selected})
+        newCustomer({name, selected})
 
         setName('')
         // setTotal('')

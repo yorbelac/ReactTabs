@@ -1,15 +1,19 @@
+import { format, formatDistance, formatRelative, subDays } from 'date-fns'
+
 import CustomerRows from "./CustomerRows"
 import AddCustomer from "./AddCustomer"
 
-const TabsPanelCustomers = ({today, customers, selectCustomer, addCustomer, deleteCustomer, customerTab}) => {
+const PanelCustomers = ({customers, selectCustomer, addCustomer, deleteCustomer, customerTab}) => {
+
+  const today = format(new Date(Date()).getTime(), 'MM/dd/yyyy')
 
   return (
     <div className="tabSelectPanel">
       {/* header */}
       <div className="tabSelectHeader">
         <div className="tabSelectHeaderDate">{today}</div>
-        <div className="tabSelectHeaderTotal">$237.04</div>
-        <div className="tabSelectHeaderOrders">18</div>
+        <div className="tabSelectHeaderTotal">$N/A</div>
+        <div className="tabSelectHeaderOrders">N/A</div>
       </div>
       {/* customers */}
       <CustomerRows 
@@ -23,4 +27,4 @@ const TabsPanelCustomers = ({today, customers, selectCustomer, addCustomer, dele
   )
 }
 
-export default TabsPanelCustomers
+export default PanelCustomers

@@ -1,9 +1,17 @@
+import {format} from 'date-fns'
 import PropTypes from 'prop-types'
 
-const TabRow = ({date,item,cost,today}) => {
+const TabRow = ({date,item,cost}) => {
+
+  const todaysDate = format(new Date(Date()).getTime(), 'MM/dd/yyyy')
+  const entryDate = new Date(date).setHours(0,0,0,0)
+  const displayDate = format(entryDate, 'MM/dd/yyyy')
+  const today = todaysDate === displayDate
+
+
   return (
     <div className={`${today ? 'tabRowToday':'tabRow'}`}>
-        <div className="tabRowDate">{date}</div>
+        <div className="tabRowDate" >{displayDate}</div>
         <div className="tabRowItem">{item}</div>
         <div className="tabRowTotal">${cost.toFixed(2)}</div>
     </div>
@@ -11,7 +19,7 @@ const TabRow = ({date,item,cost,today}) => {
 }
 
 TabRow.defaultProps = {
-  date: '5/24/2022',
+  date: 'Date',
   item: 'Menu Item',
   total: '00.00',
 }

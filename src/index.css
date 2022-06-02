@@ -93,6 +93,15 @@ select {
   border-left: 5px solid var(--yellow);
 }
 
+.navClock {
+  background-color: #404040;
+  color: var(--whiteFloor);
+  font-weight: 400;
+  border: 0;
+  padding: 20px;
+  text-align: left;
+}
+
 .navTabs {
   background-color: #ddd !important;
   color: var(--blackFloor) !important;
@@ -103,7 +112,7 @@ select {
 .appGrid {
   width: 1400px;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 50px 1fr;
   padding: 10px;
   padding-left: 15px;
@@ -276,6 +285,8 @@ select {
 .tabRows {
   display:grid;
   grid-auto-rows:40px;
+  max-height:781px;
+  overflow:auto;
 }
 
 .tabRow {
@@ -297,6 +308,7 @@ select {
 .tabRowDate {
   height: 100%;
   text-align:left;
+  overflow: hidden;
   padding-left:10px;
   border-bottom: 1px solid darkgrey;
 }

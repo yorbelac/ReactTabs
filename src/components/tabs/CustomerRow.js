@@ -3,7 +3,8 @@ import {FaTimes} from 'react-icons/fa'
 
 const CustomerRow = ({customer,selectCustomer,deleteCustomer,customerTab}) => {
 
-
+  const thisTab = customerTab.filter((entry) => entry.name === customer.name)
+  const tabTotal = ((thisTab.reduce((x,y) => x = x + y.cost, 0)))
 
   return (
     <div className={`${customer.selected ? 'tabSelectRowActive':'tabSelectRow'}`}>
@@ -11,7 +12,7 @@ const CustomerRow = ({customer,selectCustomer,deleteCustomer,customerTab}) => {
         <input type="radio" name='customer' onChange={() => selectCustomer(customer.name)}/>
       </div>
       <div className="tabSelectRowName">{customer.name}</div>
-      <div className="tabSelectRowTotal">${customer.total.toFixed(2)}</div>
+      <div className="tabSelectRowTotal">${tabTotal.toFixed(2)}</div>
       <div className='buttonContainer'>
         <button className='buttonRemoveCustomer'onClick={() => deleteCustomer(customer.name)}><FaTimes/></button>
       </div>        

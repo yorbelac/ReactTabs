@@ -1,44 +1,41 @@
 import {useState} from 'react'
+import { format, formatDistance, formatRelative, subDays } from 'date-fns'
+
 import Test from './components/Test'
 import NavPanel from './components/NavPanel'
 import AppGrid from './components/AppGrid'
 
+
 function App() {
 
   // variables
-  var today = new Date(); today = String(today.getMonth() + 1).padStart(2, '0') + '/' + String(today.getDate()).padStart(2, '0') + '/' + today.getFullYear();
+  const now = new Date(Date()).getTime()
+  const today = format(new Date(Date()).getTime(), 'MM/dd/yyyy')
+  
   const author = 'Caleb Roy'
   const client = 'Jalal Alkhatib'
   const company = 'Bites & Pipes'
   
   const [customers, setCustomers] = useState([ 
     {
-      id: 1,
       name: 'Caleb',
-      total: 250.47,
       selected: false,
     },
     {
-      id: 2,
       name: 'Shane',
-      total: 450.47,
       selected: false,
     },
     {
-      id: 3,
       name: 'Mikey',
-      total: 150.47,
       selected: false,
     },
     {
-      id: 4,
       name: 'Steve',
-      total: 50.47,
       selected: false,
     }
   ])
 
-  const [quicklist, setQuicklist] = useState([
+  const [menu, setMenu] = useState([
     {
       id:1,
       item:'Beer (Premium)',
@@ -92,63 +89,10 @@ function App() {
   ])
 
   const [customerTab, setCustomerTab] = useState([
-    {
-      id: 1,
-      name:'Mikey',
-      date: '5/10/2022',
-      item: 'Food-Chicken-Masala',
-      cost: 10.99,
-      today: true,
-    },
-    {
-      id: 2,
-      name:'Shane',
-      date: '5/10/2022',
-      item: 'Hookah-10',
-      cost: 10.00,
-      today: true,
-    },
-    {
-      id: 3,
-      name:'Caleb',
-      date: '5/10/2022',
-      item: 'Drinks-Soda (Regular)',
-      cost: 2.00,
-      today: false,
-    },
-    {
-      id: 4,
-      name:'Shane',
-      date: '5/10/2022',
-      item: 'Gyro Sandwich',
-      cost: 10.99,
-      today: true,
-    },
-    {
-      id: 5,
-      name:'Caleb',
-      date: '5/10/2022',
-      item: 'Beer-Premium',
-      cost: 3.50,
-      today: false,
-    },
-    {
-      id: 6,
-      name:'Shane',
-      date: '5/10/2022',
-      item: 'Beer-Premium',
-      cost: 3.50,
-      today: false,
-    },
-    {
-      id: 7,
-      name:'Shane',
-      date: '5/10/2022',
-      item: 'Beer-Premium',
-      cost: 3.50,
-      today: false,
-    },
+    
   ])
+
+  const isSelected = customers.filter((customer) => customer.selected === true).length > 0
 
   const selectCustomer = (name) => {
     setCustomers(
@@ -158,7 +102,6 @@ function App() {
 
   const createCustomer = (customer) => {
     const id = Math.floor(Math.random()* 10000) + 1
-    console.log(customer)
     const newCustomer = { id, ...customer }
     setCustomers([...customers, newCustomer])
   }
@@ -170,19 +113,38 @@ function App() {
     setCustomers(
       customers.filter((customer) => customer.name !== name))
   }
-  
+
+  const createTabItem = (entry) => {
+    const id = Math.floor(Math.random()* 100000) + 1
+    const newEntry = { id, ...entry }
+    setCustomerTab([...customerTab, newEntry])
+  }
+
+  const deleteTabItem = (entry) => {
+    //really all this needs to do is to add a new item with the cost inverted. Not remove from the tab. Simpler?
+    console.log('delete tab item')
+    // setCustomerTab(
+    //   customerTab.map((entry) => 
+    //     entry.id === name ? { ... customer, selected: false}:''))
+    // setCustomers(
+    //   customers.filter((customer) => customer.name !== name))
+  }
+
   // app
   return (
     <div className='container'>
-      <NavPanel />
-      <AppGrid 
-        today={today} 
-        quicklist={quicklist} 
+      <NavPanel now={now} />
+      <AppGrid
+        now={now} 
+        isSelected={isSelected}
+        menu={menu} 
         customers={customers}
         selectCustomer={selectCustomer}
         addCustomer={createCustomer} 
         deleteCustomer={deleteCustomer}
         customerTab={customerTab} 
+        createTabItem={createTabItem}
+        deleteTabItem={deleteTabItem}
       />   
       {/* <Test/>  */}
     </div>
