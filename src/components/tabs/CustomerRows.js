@@ -10,7 +10,8 @@ const CustomerRows = ({customers,selectCustomer,deleteCustomer,customerTab}) => 
           customer={customer}
           selectCustomer={selectCustomer}
           deleteCustomer={deleteCustomer}
-          customerTab={customerTab} 
+          customerTab={customerTab}
+          
         />
       ))}
     </div>

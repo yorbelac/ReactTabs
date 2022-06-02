@@ -1,8 +1,6 @@
 import QuicklistItem from './QuicklistItem'
 
-const Quicklist = ({isToday, customers, menu, addQuicklist, removeQuicklist, createTabItem}) => {
-  
-  const customerName = customers.filter((customer) => customer.selected === true)[0].name
+const Quicklist = ({isToday, customerName, menu, addQuicklist, removeQuicklist, createTabItem,taxRate}) => {
   
   return (
     <div className="quicklistPanel">
@@ -18,6 +16,7 @@ const Quicklist = ({isToday, customers, menu, addQuicklist, removeQuicklist, cre
             addQuicklist={addQuicklist} 
             removeQuicklist={removeQuicklist} 
             createTabItem={createTabItem}
+            taxRate={taxRate}
           />
         ))}
       </div>

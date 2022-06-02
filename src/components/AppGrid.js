@@ -1,8 +1,13 @@
+import {useState} from 'react'
+
 import PanelOrder from './tabs/PanelOrder'
 import PanelCustomers from './tabs/PanelCustomers'
 import PanelTabs from './tabs/PanelTabs'
+import PaymentModule from './PaymentModule'
 
 const AppGrid = (props) => {
+
+    const [paymentMode, setPaymentMode] = useState(false)
 
     return (
         <div className='appGrid'>
@@ -16,18 +21,37 @@ const AppGrid = (props) => {
                 deleteCustomer={props.deleteCustomer}
                 customerTab={props.customerTab}
             />
-            <PanelTabs
-                customers={props.customers}
-                isSelected={props.isSelected}
-                customerTab={props.customerTab}
-            /> 
-            <PanelOrder 
-                now={props.now}
-                isSelected={props.isSelected}
-                customers={props.customers}
-                menu={props.menu}
-                createTabItem={props.createTabItem}
-            /> 
+            {props.isSelected ? 
+            <>
+                <PanelTabs
+                    customers={props.customers}
+                    customerTab={props.customerTab}
+                /> 
+                {paymentMode ? 
+                    <PaymentModule 
+                        createTabItem={props.createTabItem}
+                        customers={props.customers}
+                        customerTab={props.customerTab}
+                        setPaymentMode={setPaymentMode}
+                        taxRate={props.taxRate}
+                    />
+                : 
+                    <PanelOrder 
+                        now={props.now}
+                        customers={props.customers}
+                        menu={props.menu}
+                        createTabItem={props.createTabItem}
+                        setPaymentMode={setPaymentMode}
+                        taxRate={props.taxRate}
+                    /> 
+                }
+            </>
+            :
+            <>
+                <p style={{ color: "grey", paddingLeft: '10px' }}>Nothing is selected.</p>
+            </>
+            }
+
         </div>
   )
 }

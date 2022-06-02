@@ -1,22 +1,48 @@
 import {useState} from 'react'
-import {format, getDate} from 'date-fns'
 import {FaTimes} from 'react-icons/fa'
 
-const Test = () => {
+const PaymentModule = ({customers,customerTab,createTabItem,setPaymentMode,taxRate}) => {
 
   const [payment, setPayment] = useState('')
-  const tab = 452.25
-  const tax = (tab * 1.08) - tab
-  const total = tab + tax
+
+  const customerName = customers.filter((customer) => customer.selected === true)[0].name
+  const thisTab = customerTab.filter((entry) => entry.name === customerName)
+  const total = ((thisTab.reduce((x,y) => x = x + y.cost, 0)))
+  const tax = total - (total/(taxRate))
+  const tab = total - tax
   const change = (total - payment)
 
+  const paymentMode = () => {
+      setPaymentMode(false)
+  }
+
+  const newCashEntry = () => {
+
+    const date = new Date(Date()).getTime()
+    const item = 'Cash'
+    const cost = payment * -1
+    const name = customerName
+
+    createTabItem({name, date, item, cost})
+    setPayment(0)
+}
+const newCreditEntry = () => {
+
+    const date = new Date(Date()).getTime()
+    const item = 'Credit'
+    const cost = payment * -1
+    const name = customerName
+
+    createTabItem({name, date, item, cost})
+}
+
   return (
-    <>
+    <div>
       <div className="paymentBox">
         {/* //close button */}
-        <FaTimes style={{float:'right', color: 'grey'}}/>
+        <FaTimes style={{float:'right', color: 'grey'}} onClick={paymentMode}/>
         {/* Customer Name Header */}
-        <h2 className='receiptName'>Shane</h2>
+        <h2 className='receiptName'>{customerName}</h2>
         {/* Receipt Details */}
         {/* totals */}
         <div className='receiptDetails' style={{paddingRight:'10px',paddingLeft:'10px'}}>
@@ -26,9 +52,9 @@ const Test = () => {
             <b style={{fontSize:'1.2em', color:'#202020'}}>Total</b>
           </div>
           <div style={{textAlign:'right'}}>
-            <b>${tab}</b>
+            <b>${tab.toFixed(2)}</b>
             <p>${tax.toFixed(2)}</p>
-            <b style={{fontSize:'1.2em', color:'#202020'}}>{total}</b>
+            <b style={{fontSize:'1.2em', color:'#202020'}}>{total.toFixed(2)}</b>
           </div>
         </div>
         {/* payment */}
@@ -51,12 +77,11 @@ const Test = () => {
               style={{backgroundColor: 'white', width:'100%', textAlign:'center', fontSize:'1.2em', padding:'10px'}}
               value={payment} onChange={(e) => setPayment(e.target.value)}
             ></input>
-            <div className='tabButton' style={buttonStyle}>CASH</div>
-            <div className='tabButton' style={buttonStyle}>CREDIT</div>
+            <div onClick={newCashEntry} className='tabButton' style={buttonStyle}>CASH</div>
+            <div onClick={newCreditEntry} className='tabButton' style={buttonStyle}>CREDIT</div>
         </form>
       </div>
-    </>
-
+    </div>
   )
 }
 
@@ -71,4 +96,4 @@ const buttonStyle = {
   fontWeight: 500,
 }
 
-export default Test
+export default PaymentModule

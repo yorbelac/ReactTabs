@@ -8,7 +8,7 @@ import {format} from 'date-fns'
 const NavPanel = ({now}) => {
 
 const todayDay = format(new Date(now).setHours(0,0,0,0), "eeeeeee")
-const todayDate = format(new Date(now).setHours(0,0,0,0), "MMMM dd, yyyy")
+const todayDate = format(new Date(now), "MMMM dd, yyyy hh:mm aaaaa'm")
 
   return (
     <div className="navPanel">

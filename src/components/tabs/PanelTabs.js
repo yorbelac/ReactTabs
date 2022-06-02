@@ -1,24 +1,41 @@
-import Tab from './Tab'
+import TabRow from './TabRow'
 
-const PanelTabs = ({customers,isSelected,customerTab}) => {
+const PanelTabs = ({now,customers,customerTab}) => {
 
-    //this checks if there is a tab selected. if nothing was selected it would break when it checked for the a tabName. needed another layer of scope. Probably should just bring this up to the app.js level
+    const selectedName = customers.filter((customer) => customer.selected === true)[0].name
+    const activeTab = customerTab.filter((entry) => entry.name === selectedName).sort((x,y) => y.date - x.date)
+    const tabTotal = ((activeTab.reduce((x,y) => x = x + y.cost, 0)))
+    const empty = (activeTab.length === 0)
 
     return (
         <div className="tabPanel">
-            {isSelected ?
-                <Tab customers={customers} customerTab={customerTab} />
-            :
+            <div className="tabHeader">
+                <div className="tabHeaderName">{selectedName}</div>
+                <div className="tabHeaderTotal">${tabTotal.toFixed(2)}</div>
+            </div>
+            <div className="tabRows">
+                {empty ? 
                 <>
-                    <div className="tabHeader">
-                        <div className="tabHeaderName">Customer</div>
-                        <div className="tabHeaderTotal">$0.00</div>
-                    </div>
-                    <p style={{ color: "darkgrey", paddingLeft: '10px' }}>Nothing is selected.</p>
+                    <p style={{ color: "grey", paddingLeft: '10px' }}>Tab is empty.</p>
                 </>
-            }
+                :
+                <>
+                    {activeTab.map((entry) => (
+                        <TabRow 
+                            now={now}    
+                            key={entry.id} 
+                            date={entry.date} 
+                            item={entry.item} 
+                            cost={entry.cost} 
+                            today={entry.today}
+                        />
+                    ))}
+                </>
+                }
+            </div> 
         </div>
     )
 }
+
 
 export default PanelTabs

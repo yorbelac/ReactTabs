@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { format, formatDistance, formatRelative, subDays } from 'date-fns'
+import { format } from 'date-fns'
 
 import Test from './components/Test'
 import NavPanel from './components/NavPanel'
@@ -10,11 +10,11 @@ function App() {
 
   // variables
   const now = new Date(Date()).getTime()
-  const today = format(new Date(Date()).getTime(), 'MM/dd/yyyy')
   
   const author = 'Caleb Roy'
   const client = 'Jalal Alkhatib'
   const company = 'Bites & Pipes'
+  const taxRate = 1.08
   
   const [customers, setCustomers] = useState([ 
     {
@@ -97,7 +97,7 @@ function App() {
   const selectCustomer = (name) => {
     setCustomers(
       customers.map((customer) => 
-        customer.name === name ? { ... customer, selected: true} : {... customer, selected: false}))
+        customer.name === name ? { ... customer, selected: !customer.selected} : {... customer, selected: false}))
   }
 
   const createCustomer = (customer) => {
@@ -121,13 +121,9 @@ function App() {
   }
 
   const deleteTabItem = (entry) => {
-    //really all this needs to do is to add a new item with the cost inverted. Not remove from the tab. Simpler?
-    console.log('delete tab item')
-    // setCustomerTab(
-    //   customerTab.map((entry) => 
-    //     entry.id === name ? { ... customer, selected: false}:''))
-    // setCustomers(
-    //   customers.filter((customer) => customer.name !== name))
+    const id = Math.floor(Math.random()* 100000) + 1
+    const newEntry = { id, ...entry }
+    setCustomerTab([...customerTab, newEntry])
   }
 
   // app
@@ -138,6 +134,7 @@ function App() {
         now={now} 
         isSelected={isSelected}
         menu={menu} 
+        taxRate={taxRate}
         customers={customers}
         selectCustomer={selectCustomer}
         addCustomer={createCustomer} 
