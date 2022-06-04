@@ -1,11 +1,11 @@
 import DropDownMenu from "./DropDownMenu"
 
-const TabsPanelOrderDropdowns = () => {
+const OrderDropdowns = ({menu}) => {
   return (
     <div className="tabOrderMenu">
-        <DropDownMenu/>
-        <DropDownMenu/>
-        <DropDownMenu/>
+        <DropDownMenu menu={menu}/>
+        <DropDownMenu menu={menu}/>
+        <DropDownMenu menu={menu}/>
         <div className="tabOrderButtons">
             <div className="tabButton" style={{backgroundColor:'#34A853'}}>+</div>
             <div className="tabOrderTotal">$16.55</div>
@@ -15,4 +15,4 @@ const TabsPanelOrderDropdowns = () => {
   )
 }
 
-export default TabsPanelOrderDropdowns
+export default OrderDropdowns

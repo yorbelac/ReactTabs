@@ -1,7 +1,7 @@
 const MenuPanel = () => {
   return (
-    <div>
-      <p>Menu Panel</p>
+    <div style={{padding:'20px'}}>
+      <p>Menu Panel (this section is still under construction)</p>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 const SettingsPanel = () => {
   return (
-    <div>
-      <p>Settings Panel</p>
+    <div style={{padding:'20px'}}>
+      <p>Settings Panel (this section is still under construction)</p>
     </div>
   )
 }

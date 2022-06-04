@@ -37,7 +37,7 @@ const NavPanel = ({now, panel, setPanel}) => {
       <div onClick={menuPanel} className={`${panel==='menuPanel' ? 'navActive':''}`}>Menu<img src={iconMenu} alt="" style={{float:'right'}}/></div>
       <div onClick={statsPanel} className={`${panel==='statsPanel' ? 'navActive':''}`}>Stats<img src={iconStats} alt="" style={{float:'right'}}/></div>
       <div onClick={settingsPanel} className={`${panel==='settingsPanel' ? 'navActive':''}`}>Settings<img src={iconSettings} alt="" style={{float:'right'}}/></div>
-      {/* <div onClick={testPanel} className={`${panel==='testPanel' ? 'navActive':''}`}>Test<img src={iconSettings} alt="" style={{float:'right'}}/></div> */}
+      <div onClick={testPanel} className={`${panel==='testPanel' ? 'navActive':''}`}>Test<img src={iconSettings} alt="" style={{float:'right'}}/></div>
     </div>
   </div>
   )

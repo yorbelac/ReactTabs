@@ -7,7 +7,7 @@ import MenuPanel from './components/MenuPanel'
 import StatsPanel from './components/StatsPanel' 
 import SettingsPanel from './components/SettingsPanel' 
 
-import menuItems from './components/menu/menu'
+import menuItems from './menu.json'
 
 function App() {
 
@@ -175,12 +175,10 @@ function App() {
         ''
       }
       {panel==='testPanel'?
-        <Test />
+        <Test menu={menuItems}/>
       :
         ''
       }
-  
-      {/* <Test/>    */}
     </div>
   );
 }

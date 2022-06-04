@@ -1,12 +1,13 @@
-const DropDownMenu = () => {
+const DropDownMenu = ({menu}) => {
+
   return (
-    <select name="menu">
-      <option value='DEFAULT'>Food</option>
-      <option>Drinks</option>
-      <option>Hookah</option>
-      <option>Supplies</option>
+    <select name="menuItems">
+        {menu.map((entry) => (
+          <option>{entry.item}</option>
+        ))}
     </select>
   )
+
 }
 
 export default DropDownMenu

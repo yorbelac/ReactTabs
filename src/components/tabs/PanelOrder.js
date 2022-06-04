@@ -8,7 +8,7 @@ const PanelOrder = ({now, customers, menu, addQuicklist, removeQuicklist, create
 
   return (
     <div className="tabOrderPanel">
-          <OrderDropdowns />
+          <OrderDropdowns menu={menu}/>
           <OrderPayment 
             createTabItem={createTabItem}
             customerName={customerName} 
