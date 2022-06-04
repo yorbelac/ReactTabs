@@ -3,11 +3,9 @@ import {useState} from 'react'
 import PanelOrder from './tabs/PanelOrder'
 import PanelCustomers from './tabs/PanelCustomers'
 import PanelTabs from './tabs/PanelTabs'
-import PaymentModule from './PaymentModule'
+import PaymentModule from './tabs/PaymentModule'
 
-const AppGrid = (props) => {
-
-    const [paymentMode, setPaymentMode] = useState(false)
+const TabsPanel = (props) => {
 
     return (
         <div className='appGrid'>
@@ -27,12 +25,12 @@ const AppGrid = (props) => {
                     customers={props.customers}
                     customerTab={props.customerTab}
                 /> 
-                {paymentMode ? 
+                {props.paymentMode ? 
                     <PaymentModule 
                         createTabItem={props.createTabItem}
                         customers={props.customers}
                         customerTab={props.customerTab}
-                        setPaymentMode={setPaymentMode}
+                        setPaymentMode={props.setPaymentMode}
                         taxRate={props.taxRate}
                     />
                 : 
@@ -41,7 +39,7 @@ const AppGrid = (props) => {
                         customers={props.customers}
                         menu={props.menu}
                         createTabItem={props.createTabItem}
-                        setPaymentMode={setPaymentMode}
+                        setPaymentMode={props.setPaymentMode}
                         taxRate={props.taxRate}
                     /> 
                 }
@@ -56,4 +54,4 @@ const AppGrid = (props) => {
   )
 }
 
-export default AppGrid
+export default TabsPanel

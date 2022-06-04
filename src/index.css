@@ -101,7 +101,7 @@ select {
   text-align: left;
 }
 
-.navTabs {
+.navActive {
   background-color: #ddd !important;
   color: var(--blackFloor) !important;
   border-left: 5px solid var(--green) !important;

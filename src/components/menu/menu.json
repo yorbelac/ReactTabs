@@ -1,0 +1,576 @@
+[
+ {
+   "Sku": "Drinks-Beer (Premium)-",
+   "Category": "Drinks",
+   "Item": "Beer (Premium)",
+   "Variation": "",
+   "Cost": 3.5
+ },
+ {
+   "Sku": "Drinks-Beer (Regular)-",
+   "Category": "Drinks",
+   "Item": "Beer (Regular)",
+   "Variation": "",
+   "Cost": 3
+ },
+ {
+   "Sku": "Drinks-Mixed Drink-",
+   "Category": "Drinks",
+   "Item": "Mixed Drink",
+   "Variation": "",
+   "Cost": 6
+ },
+ {
+   "Sku": "Drinks-Shot-",
+   "Category": "Drinks",
+   "Item": "Shot",
+   "Variation": "",
+   "Cost": 5
+ },
+ {
+   "Sku": "Drinks-Soda $2-",
+   "Category": "Drinks",
+   "Item": "Soda $2",
+   "Variation": "",
+   "Cost": 2
+ },
+ {
+   "Sku": "Drinks-Soda $3-",
+   "Category": "Drinks",
+   "Item": "Soda $3",
+   "Variation": "",
+   "Cost": 3
+ },
+ {
+   "Sku": "Drinks-Tea-",
+   "Category": "Drinks",
+   "Item": "Tea",
+   "Variation": "",
+   "Cost": 5
+ },
+ {
+   "Sku": "Drinks-Water-",
+   "Category": "Drinks",
+   "Item": "Water",
+   "Variation": "",
+   "Cost": 1
+ },
+ {
+   "Sku": "Food-Apple Turnover-",
+   "Category": "Food",
+   "Item": "Apple Turnover",
+   "Variation": "",
+   "Cost": 4.99
+ },
+ {
+   "Sku": "Food-Baklava-",
+   "Category": "Food",
+   "Item": "Baklava",
+   "Variation": "",
+   "Cost": 4.99
+ },
+ {
+   "Sku": "Food-Beef Kabob-",
+   "Category": "Food",
+   "Item": "Beef Kabob",
+   "Variation": "",
+   "Cost": 14.99
+ },
+ {
+   "Sku": "Food-Biryani-",
+   "Category": "Food",
+   "Item": "Biryani",
+   "Variation": "",
+   "Cost": 12.99
+ },
+ {
+   "Sku": "Food-Bites & Pipes Burger-",
+   "Category": "Food",
+   "Item": "Bites & Pipes Burger",
+   "Variation": "",
+   "Cost": 10.99
+ },
+ {
+   "Sku": "Food-Bites & Pipes Platter-",
+   "Category": "Food",
+   "Item": "Bites & Pipes Platter",
+   "Variation": "",
+   "Cost": 16.99
+ },
+ {
+   "Sku": "Food-Borak-4x",
+   "Category": "Food",
+   "Item": "Borak",
+   "Variation": "4x",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Borak-Cheese",
+   "Category": "Food",
+   "Item": "Borak",
+   "Variation": "Cheese",
+   "Cost": 2.5
+ },
+ {
+   "Sku": "Food-Borak-Meat",
+   "Category": "Food",
+   "Item": "Borak",
+   "Variation": "Meat",
+   "Cost": 2.5
+ },
+ {
+   "Sku": "Food-Buffalo Chicken Sandwich-",
+   "Category": "Food",
+   "Item": "Buffalo Chicken Sandwich",
+   "Variation": "",
+   "Cost": 9.99
+ },
+ {
+   "Sku": "Food-Butter Chicken-",
+   "Category": "Food",
+   "Item": "Butter Chicken",
+   "Variation": "",
+   "Cost": 10.99
+ },
+ {
+   "Sku": "Food-Chelo Kabob-",
+   "Category": "Food",
+   "Item": "Chelo Kabob",
+   "Variation": "",
+   "Cost": 14.99
+ },
+ {
+   "Sku": "Food-Chicken & Fries Fusion-",
+   "Category": "Food",
+   "Item": "Chicken & Fries Fusion",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Chicken & Waffles-",
+   "Category": "Food",
+   "Item": "Chicken & Waffles",
+   "Variation": "",
+   "Cost": 9.99
+ },
+ {
+   "Sku": "Food-Chicken Breast-",
+   "Category": "Food",
+   "Item": "Chicken Breast",
+   "Variation": "",
+   "Cost": 11.99
+ },
+ {
+   "Sku": "Food-Chicken Buffalo Sandwich-",
+   "Category": "Food",
+   "Item": "Chicken Buffalo Sandwich",
+   "Variation": "",
+   "Cost": 9.99
+ },
+ {
+   "Sku": "Food-Chicken Masala-",
+   "Category": "Food",
+   "Item": "Chicken Masala",
+   "Variation": "",
+   "Cost": 10.99
+ },
+ {
+   "Sku": "Food-Chicken Pesto Sandwich-",
+   "Category": "Food",
+   "Item": "Chicken Pesto Sandwich",
+   "Variation": "",
+   "Cost": 10.99
+ },
+ {
+   "Sku": "Food-Chicken Quesadilla-",
+   "Category": "Food",
+   "Item": "Chicken Quesadilla",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Chicken Salad-",
+   "Category": "Food",
+   "Item": "Chicken Salad",
+   "Variation": "",
+   "Cost": 9.99
+ },
+ {
+   "Sku": "Food-Chicken Shawarma Plate-",
+   "Category": "Food",
+   "Item": "Chicken Shawarma Plate",
+   "Variation": "",
+   "Cost": 12.99
+ },
+ {
+   "Sku": "Food-Chicken Shawarma Sandwich-",
+   "Category": "Food",
+   "Item": "Chicken Shawarma Sandwich",
+   "Variation": "",
+   "Cost": 9.99
+ },
+ {
+   "Sku": "Food-Chicken Strip Basket-",
+   "Category": "Food",
+   "Item": "Chicken Strip Basket",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Falafel Sandwich-",
+   "Category": "Food",
+   "Item": "Falafel Sandwich",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Falafel-",
+   "Category": "Food",
+   "Item": "Falafel",
+   "Variation": "",
+   "Cost": 6.99
+ },
+ {
+   "Sku": "Food-Fattoush-",
+   "Category": "Food",
+   "Item": "Fattoush",
+   "Variation": "",
+   "Cost": 7.99
+ },
+ {
+   "Sku": "Food-Fettuccine Alfredo-",
+   "Category": "Food",
+   "Item": "Fettuccine Alfredo",
+   "Variation": "",
+   "Cost": 12.99
+ },
+ {
+   "Sku": "Food-Fish and Chips-",
+   "Category": "Food",
+   "Item": "Fish and Chips",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Fried Mac & Cheese-",
+   "Category": "Food",
+   "Item": "Fried Mac & Cheese",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Fried Pickles-",
+   "Category": "Food",
+   "Item": "Fried Pickles",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Fries-",
+   "Category": "Food",
+   "Item": "Fries",
+   "Variation": "",
+   "Cost": 3.99
+ },
+ {
+   "Sku": "Food-Funnel Cake-",
+   "Category": "Food",
+   "Item": "Funnel Cake",
+   "Variation": "",
+   "Cost": 4.99
+ },
+ {
+   "Sku": "Food-Gyro Plate-",
+   "Category": "Food",
+   "Item": "Gyro Plate",
+   "Variation": "",
+   "Cost": 12.99
+ },
+ {
+   "Sku": "Food-Gyro Sandwich-",
+   "Category": "Food",
+   "Item": "Gyro Sandwich",
+   "Variation": "",
+   "Cost": 9.99
+ },
+ {
+   "Sku": "Food-Hummus-",
+   "Category": "Food",
+   "Item": "Hummus",
+   "Variation": "",
+   "Cost": 3.99
+ },
+ {
+   "Sku": "Food-Jalepeno Poppers-",
+   "Category": "Food",
+   "Item": "Jalepeno Poppers",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Kibbeh-",
+   "Category": "Food",
+   "Item": "Kibbeh",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Lentil Soup-",
+   "Category": "Food",
+   "Item": "Lentil Soup",
+   "Variation": "",
+   "Cost": 3.99
+ },
+ {
+   "Sku": "Food-Mozzarella Sticks-",
+   "Category": "Food",
+   "Item": "Mozzarella Sticks",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Onion Rings-",
+   "Category": "Food",
+   "Item": "Onion Rings",
+   "Variation": "",
+   "Cost": 6.99
+ },
+ {
+   "Sku": "Food-Patty Melt Sandwich-",
+   "Category": "Food",
+   "Item": "Patty Melt Sandwich",
+   "Variation": "",
+   "Cost": 10.99
+ },
+ {
+   "Sku": "Food-Pizza-Zaatar",
+   "Category": "Food",
+   "Item": "Pizza",
+   "Variation": "Zaatar",
+   "Cost": 5.99
+ },
+ {
+   "Sku": "Food-Popcorn Shrimp Basket-",
+   "Category": "Food",
+   "Item": "Popcorn Shrimp Basket",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Samosa-",
+   "Category": "Food",
+   "Item": "Samosa",
+   "Variation": "",
+   "Cost": 7.99
+ },
+ {
+   "Sku": "Food-Sampler App Platter-",
+   "Category": "Food",
+   "Item": "Sampler App Platter",
+   "Variation": "",
+   "Cost": 11.99
+ },
+ {
+   "Sku": "Food-Sampler App-",
+   "Category": "Food",
+   "Item": "Sampler App",
+   "Variation": "",
+   "Cost": 9.99
+ },
+ {
+   "Sku": "Food-Spaghetti-",
+   "Category": "Food",
+   "Item": "Spaghetti",
+   "Variation": "",
+   "Cost": 11.99
+ },
+ {
+   "Sku": "Food-Steak-",
+   "Category": "Food",
+   "Item": "Steak",
+   "Variation": "",
+   "Cost": 13.99
+ },
+ {
+   "Sku": "Food-Taco-Chicken",
+   "Category": "Food",
+   "Item": "Taco",
+   "Variation": "Chicken",
+   "Cost": 2.99
+ },
+ {
+   "Sku": "Food-Taco-Steak",
+   "Category": "Food",
+   "Item": "Taco",
+   "Variation": "Steak",
+   "Cost": 2.99
+ },
+ {
+   "Sku": "Food-Tacos 4x-",
+   "Category": "Food",
+   "Item": "Tacos 4x",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Tacos 4x-Chicken",
+   "Category": "Food",
+   "Item": "Tacos 4x",
+   "Variation": "Chicken",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Tacos 4x-Mixed",
+   "Category": "Food",
+   "Item": "Tacos 4x",
+   "Variation": "Mixed",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Tacos 4x-Steak",
+   "Category": "Food",
+   "Item": "Tacos 4x",
+   "Variation": "Steak",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Turkey Sandwich-",
+   "Category": "Food",
+   "Item": "Turkey Sandwich",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Veggie Burrito-",
+   "Category": "Food",
+   "Item": "Veggie Burrito",
+   "Variation": "",
+   "Cost": 8.99
+ },
+ {
+   "Sku": "Food-Wings 10x-Bone In",
+   "Category": "Food",
+   "Item": "Wings 10x",
+   "Variation": "Bone In",
+   "Cost": 11.99
+ },
+ {
+   "Sku": "Food-Wings 10x-boneless",
+   "Category": "Food",
+   "Item": "Wings 10x",
+   "Variation": "boneless",
+   "Cost": 10.99
+ },
+ {
+   "Sku": "Food-Wings 20x-Bone In",
+   "Category": "Food",
+   "Item": "Wings 20x",
+   "Variation": "Bone In",
+   "Cost": 21.99
+ },
+ {
+   "Sku": "Food-Wings 20x-boneless",
+   "Category": "Food",
+   "Item": "Wings 20x",
+   "Variation": "boneless",
+   "Cost": 20.99
+ },
+ {
+   "Sku": "Food-Wings 30x-Bone In",
+   "Category": "Food",
+   "Item": "Wings 30x",
+   "Variation": "Bone In",
+   "Cost": 31.99
+ },
+ {
+   "Sku": "Food-Wings 30x-boneless",
+   "Category": "Food",
+   "Item": "Wings 30x",
+   "Variation": "boneless",
+   "Cost": 30.99
+ },
+ {
+   "Sku": "Food-Wings 5x-Bone In",
+   "Category": "Food",
+   "Item": "Wings 5x",
+   "Variation": "Bone In",
+   "Cost": 6.99
+ },
+ {
+   "Sku": "Food-Wings 5x-boneless",
+   "Category": "Food",
+   "Item": "Wings 5x",
+   "Variation": "boneless",
+   "Cost": 5.99
+ },
+ {
+   "Sku": "Hookah-10-",
+   "Category": "Hookah",
+   "Item": "10",
+   "Variation": "",
+   "Cost": 10
+ },
+ {
+   "Sku": "Hookah-Al Fakher-",
+   "Category": "Hookah",
+   "Item": "Al Fakher",
+   "Variation": "",
+   "Cost": 12.99
+ },
+ {
+   "Sku": "Hookah-Refill-",
+   "Category": "Hookah",
+   "Item": "Refill",
+   "Variation": "",
+   "Cost": 5
+ },
+ {
+   "Sku": "Hookah-Starbuzz-",
+   "Category": "Hookah",
+   "Item": "Starbuzz",
+   "Variation": "",
+   "Cost": 15.99
+ },
+ {
+   "Sku": "Supplies-Coals-Instant",
+   "Category": "Supplies",
+   "Item": "Coals",
+   "Variation": "Instant",
+   "Cost": 3
+ },
+ {
+   "Sku": "Supplies-Coals-Regular",
+   "Category": "Supplies",
+   "Item": "Coals",
+   "Variation": "Regular",
+   "Cost": 11
+ },
+ {
+   "Sku": "Supplies-Foil-",
+   "Category": "Supplies",
+   "Item": "Foil",
+   "Variation": "",
+   "Cost": 4.99
+ },
+ {
+   "Sku": "Supplies-Tobacco-Al Fahker $14",
+   "Category": "Supplies",
+   "Item": "Tobacco",
+   "Variation": "Al Fahker $14",
+   "Cost": 14
+ },
+ {
+   "Sku": "Supplies-Tobacco-Small $4.99",
+   "Category": "Supplies",
+   "Item": "Tobacco",
+   "Variation": "Small $4.99",
+   "Cost": 4.99
+ },
+ {
+   "Sku": "Supplies-Tobacco-Starbuzz $24",
+   "Category": "Supplies",
+   "Item": "Tobacco",
+   "Variation": "Starbuzz $24",
+   "Cost": 24
+ }
+]

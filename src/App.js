@@ -1,10 +1,13 @@
 import {useState} from 'react'
-import { format } from 'date-fns'
 
 import Test from './components/Test'
 import NavPanel from './components/NavPanel'
-import AppGrid from './components/AppGrid'
+import TabsPanel from './components/TabsPanel'
+import MenuPanel from './components/MenuPanel' 
+import StatsPanel from './components/StatsPanel' 
+import SettingsPanel from './components/SettingsPanel' 
 
+import menuItems from './components/menu/menu'
 
 function App() {
 
@@ -15,7 +18,7 @@ function App() {
   const client = 'Jalal Alkhatib'
   const company = 'Bites & Pipes'
   const taxRate = 1.08
-  
+
   const [customers, setCustomers] = useState([ 
     {
       name: 'Caleb',
@@ -34,6 +37,8 @@ function App() {
       selected: false,
     }
   ])
+
+  const [inv, setInv] = useState(menuItems)
 
   const [menu, setMenu] = useState([
     {
@@ -92,12 +97,15 @@ function App() {
     
   ])
 
+  const [paymentMode, setPaymentMode] = useState(false)
+  
   const isSelected = customers.filter((customer) => customer.selected === true).length > 0
 
   const selectCustomer = (name) => {
     setCustomers(
       customers.map((customer) => 
         customer.name === name ? { ... customer, selected: !customer.selected} : {... customer, selected: false}))
+    setPaymentMode(false)
   }
 
   const createCustomer = (customer) => {
@@ -125,25 +133,54 @@ function App() {
     const newEntry = { id, ...entry }
     setCustomerTab([...customerTab, newEntry])
   }
+  
+  const [panel, setPanel] = useState('tabsPanel')
 
   // app
   return (
     <div className='container'>
-      <NavPanel now={now} />
-      <AppGrid
-        now={now} 
-        isSelected={isSelected}
-        menu={menu} 
-        taxRate={taxRate}
-        customers={customers}
-        selectCustomer={selectCustomer}
-        addCustomer={createCustomer} 
-        deleteCustomer={deleteCustomer}
-        customerTab={customerTab} 
-        createTabItem={createTabItem}
-        deleteTabItem={deleteTabItem}
-      />   
-      {/* <Test/>  */}
+      <NavPanel now={now} panel={panel} setPanel={setPanel}/>
+      {panel==='tabsPanel'?
+        <TabsPanel
+          now={now} 
+          isSelected={isSelected}
+          menu={menu} 
+          taxRate={taxRate}
+          customers={customers}
+          selectCustomer={selectCustomer}
+          addCustomer={createCustomer} 
+          deleteCustomer={deleteCustomer}
+          customerTab={customerTab} 
+          createTabItem={createTabItem}
+          deleteTabItem={deleteTabItem}
+          paymentMode={paymentMode}
+          setPaymentMode={setPaymentMode}
+        />
+      :
+        ''
+      }
+      {panel==='menuPanel'?
+        <MenuPanel />
+      :
+        ''
+      }
+      {panel==='statsPanel'?
+        <StatsPanel />
+      :
+        ''
+      }      
+      {panel==='settingsPanel'?
+        <SettingsPanel />
+      :
+        ''
+      }
+      {panel==='testPanel'?
+        <Test />
+      :
+        ''
+      }
+  
+      {/* <Test/>    */}
     </div>
   );
 }

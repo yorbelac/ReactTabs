@@ -2,7 +2,7 @@ const ButtonPayment = ({setPaymentMode}) => {
 
   const paymentMode = () => {
     setPaymentMode(true)
-}
+  }
 
   return (
     <>
