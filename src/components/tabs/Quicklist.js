@@ -6,13 +6,13 @@ const Quicklist = ({isToday, customerName, menu, addQuicklist, removeQuicklist, 
     <div className="quicklistPanel">
       <div className="quicklistHeader">Popular Menu Items</div>
       <div className="quicklist">
-        {menu.map((entry) => (
+        {menu.slice(0,10).map((entry) => (
           <QuicklistItem 
             isToday={isToday} 
             key={entry.id} 
             customerName={customerName}
-            item={entry.item} 
-            cost={entry.cost} 
+            item={entry.Item} 
+            cost={entry.Price} 
             addQuicklist={addQuicklist} 
             removeQuicklist={removeQuicklist} 
             createTabItem={createTabItem}

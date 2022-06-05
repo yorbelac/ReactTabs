@@ -7,7 +7,8 @@ import MenuPanel from './components/MenuPanel'
 import StatsPanel from './components/StatsPanel' 
 import SettingsPanel from './components/SettingsPanel' 
 
-import menuItems from './menu.json'
+import menu from './menu.json'
+import tabItems from './customerTabs.json'
 
 function App() {
 
@@ -38,64 +39,62 @@ function App() {
     }
   ])
 
-  const [inv, setInv] = useState(menuItems)
+  const [tabs, setTabs] = useState(tabItems)
 
-  const [menu, setMenu] = useState([
-    {
-      id:1,
-      item:'Beer (Premium)',
-      cost:3.50,
-    },
-    {
-      id:2,
-      item:'Shot',
-      cost:5.00,
-    },
-    {
-      id:3,
-      item:'Mixed Drink',
-      cost:6.00,
-    },
-    {
-      id:4,
-      item:'Soda (Premium)',
-      cost:3.00,
-    },
-    {
-      id:5,
-      item:'Soda (Regular)',
-      cost:2.00,
-    },
-    {
-      id:6,
-      item:'Beer (Regular)',
-      cost:3.00,
-    },
-    {
-      id:7,
-      item:'Hookah Special',
-      cost:10.00,
-    },
-    {
-      id:8,
-      item:'Hookah Al Fakher',
-      cost:12.99,
-    },
-    {
-      id:9,
-      item:'Tea',
-      cost:5.00,
-    },
-    {
-      id:10,
-      item:'Chicken Masala',
-      cost:10.99,
-    }
-  ])
+  // const [menu, setMenu] = useState([
+  //   {
+  //     id:1,
+  //     item:'Beer (Premium)',
+  //     cost:3.50,
+  //   },
+  //   {
+  //     id:2,
+  //     item:'Shot',
+  //     cost:5.00,
+  //   },
+  //   {
+  //     id:3,
+  //     item:'Mixed Drink',
+  //     cost:6.00,
+  //   },
+  //   {
+  //     id:4,
+  //     item:'Soda (Premium)',
+  //     cost:3.00,
+  //   },
+  //   {
+  //     id:5,
+  //     item:'Soda (Regular)',
+  //     cost:2.00,
+  //   },
+  //   {
+  //     id:6,
+  //     item:'Beer (Regular)',
+  //     cost:3.00,
+  //   },
+  //   {
+  //     id:7,
+  //     item:'Hookah Special',
+  //     cost:10.00,
+  //   },
+  //   {
+  //     id:8,
+  //     item:'Hookah Al Fakher',
+  //     cost:12.99,
+  //   },
+  //   {
+  //     id:9,
+  //     item:'Tea',
+  //     cost:5.00,
+  //   },
+  //   {
+  //     id:10,
+  //     item:'Chicken Masala',
+  //     cost:10.99,
+  //   }
+  // ])
 
-  const [customerTab, setCustomerTab] = useState([
-    
-  ])
+  const [customerTab, setCustomerTab] = useState(tabItems)
 
   const [paymentMode, setPaymentMode] = useState(false)
   
@@ -175,7 +174,7 @@ function App() {
         ''
       }
       {panel==='testPanel'?
-        <Test menu={menuItems}/>
+        <Test menu={menu}/>
       :
         ''
       }

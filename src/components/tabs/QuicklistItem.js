@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import AddTabItem from './AddTabItem'
-import RemoveTabItem from './RemoveTabItem'
+import AddTabItem from './AddQuicklistItem'
+import RemoveTabItem from './RemoveQuicklistItem'
 
 const QuicklistItem = ({now,isToday,customerName,item,cost,name,addQuicklist,removeQuicklist,createTabItem,taxRate}) => {
 

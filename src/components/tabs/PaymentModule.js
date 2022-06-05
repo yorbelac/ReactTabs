@@ -27,7 +27,7 @@ const PaymentModule = ({customers,customerTab,createTabItem,setPaymentMode,taxRa
 
     createTabItem({name, date, item, cost})
 
-    setPayment(0)
+    setPayment('')
   }
 
   const newCreditEntry = () => {
@@ -37,7 +37,7 @@ const PaymentModule = ({customers,customerTab,createTabItem,setPaymentMode,taxRa
 
     createTabItem({name, date, item, cost})
 
-    setPayment(0)
+    setPayment('')
   } 
 
   const makeChange = () => {

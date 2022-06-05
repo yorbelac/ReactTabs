@@ -39,6 +39,7 @@ const TabsPanel = (props) => {
                         customers={props.customers}
                         menu={props.menu}
                         createTabItem={props.createTabItem}
+                        removeTabItem={props.removeTabItem}
                         setPaymentMode={props.setPaymentMode}
                         taxRate={props.taxRate}
                     /> 

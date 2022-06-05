@@ -13,7 +13,7 @@ const PanelTabs = ({now,customers,customerTab}) => {
                 <div className="tabHeaderName">{selectedName}</div>
                 <div className="tabHeaderTotal">${tabTotal.toFixed(2)}</div>
             </div>
-            <div className="tabRows">
+            <div className="tabRows" style={{paddingLeft:'5px', paddingRight:'5px'}}>
                 {empty ? 
                 <>
                     <p style={{ color: "grey", paddingLeft: '10px' }}>Tab is empty.</p>

@@ -252,7 +252,7 @@ select {
 
 .tabHeader {
   display:grid;
-  grid-template-columns: 3fr 120px;;
+  grid-template-columns: 3fr 142px;;
   min-height: 40px;
   line-height:40px;
   margin-bottom: 10px;

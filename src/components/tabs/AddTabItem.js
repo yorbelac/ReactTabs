@@ -11,14 +11,14 @@ const AddTabItem = ({createTabItem, itemName, itemCost, customerName,taxRate}) =
 
         const date = new Date(Date()).getTime()
         const item = itemName
-        const cost = itemCost * taxRate
+        const cost = (itemCost * taxRate)
         const name = customerName
 
         createTabItem({name, date, item, cost})
     }
 
     return (
-        <button onClick={newEntry} className="tabButton" style={{backgroundColor:'#34A853',height:'30px', lineHeight:'30px'}}>+</button>
+        <button onClick={newEntry} className="tabButton" style={{backgroundColor:'#34A853',height:'60px', lineHeight:'60px'}}>+</button>
     )
 }
 
